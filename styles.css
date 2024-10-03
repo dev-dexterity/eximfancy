@@ -131,9 +131,14 @@ nav {
     height: 30vw;
     width: 30vw;
     border-radius: 50%;
-    background-color: #FE320A;
+    background: linear-gradient(#FE320A, #fe3f0a);
     filter: blur(20px);
     position: absolute;
+    animation-name: anime2;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
 }
 
 
@@ -145,7 +150,7 @@ nav {
     filter: blur(20px);
     position: absolute;
     animation-name: anime1;
-    animation-duration: 3s;
+    animation-duration: 5s;
     animation-timing-function: linear;
     animation-direction: alternate;
     animation-iteration-count: infinite;
@@ -157,5 +162,14 @@ nav {
     }
     to {
         transform: translate(0%,10%);
+    }
+}
+
+@keyframes anime2 {
+    from {
+        transform: translate(5%, -5%);
+    }
+    to {
+        transform: translate(-20%,30%);
     }
 }

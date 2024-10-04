@@ -95,6 +95,10 @@ nav {
     line-height: 1.5vw;
 }
 
+#right h4 {
+    position: absolute;
+}
+
 #center h1 {
     font-size: 10vw;
     line-height: 8vw;
@@ -123,7 +127,7 @@ nav {
     border-top-left-radius: 50%;
     border-bottom-left-radius: 50%;
     background-color: #FE320A;
-    filter: blur(20px);
+    filter: blur(15px);
     position: absolute;
 }
 

@@ -3,7 +3,11 @@
     src: url(./NeueHaasDisplayMediu.ttf);
 }
 
-
+@font-face {
+    font-family: neue;
+    src: url(./NeueHaasDisplayRoman.ttf);
+    font-weight: 200;
+}
 
 * {
     margin: 0;
@@ -34,10 +38,13 @@ html, body {
 nav {
     padding: 2vw 0;
     width: 100%;
+    position: relative;
+    z-index: 100;
     /* background-color: red; */
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
 }
 
 #nav-part2 {
@@ -84,6 +91,10 @@ nav {
 
 #nav-part2 h4:hover a {
     color: white;
+}
+
+nav h3{
+    display: none;
 }
 
 #center {
@@ -212,7 +223,7 @@ nav {
     height: 60vh;
     width: 100%;
     background-color: #EFEAE3;
-    padding: 4vw 2vw;
+    padding: 5vw 2vw;
 }
 
 #page4 {
@@ -271,33 +282,20 @@ nav {
 .swiper {
     width: 100%;
     height: 100%;
-  }
+}
 
-  .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .swiper-slide {
+.swiper-slide {
+    border-left: 1px solid #0000003c;
     width: 30%;
-  }
+    padding: 0 2vw;
+}
 
 #services {
     font-size: 2vw;
     padding-left: 1vw;
     padding-bottom: 1vw;
 }  
+
 
 @keyframes anime1 {
     from {
@@ -323,5 +321,51 @@ nav {
     }
     to {
         transform: translateX(-100%);
+    }
+}
+
+#full-scr {
+    height: 100vh;
+    width: 100%;
+    background-color: #0000003c;
+    position: fixed;
+    z-index: 99;
+    top: -100%;
+    transition: all ease 0.8s;
+}
+
+
+@media (max-width:600px) {
+    #page1{
+        #page1 {
+            min-height: 100vh;
+            width: 100vw;
+            padding: 0 5vw;
+        }
+        
+        nav {
+            padding: 8vw 0;
+            position: relative;
+            z-index: 100;
+        }
+
+        #nav img {
+            height: 9vh;
+            transition: all ease 0.4s;
+        }
+        
+        #nav-part2 {
+            display: none;
+        }
+        nav h3{
+            display: block;
+            padding: 2vw 5vw;
+            border: 1px solid #0000003c;
+            border-radius: 50px;
+            font-size: 4vw;
+            font-weight: 200;
+            padding-left: 10vw;
+        }
+        
     }
 }

@@ -161,6 +161,45 @@ nav {
     animation-iteration-count: infinite;
 }
 
+#page2 {
+    min-height: 100vh;
+    width: 100%;
+    padding: 6vw 0;
+    /* background-color: orange; */
+}
+
+#moving-text h1{
+    font-size: 9vw;
+    display: inline-block;
+}
+
+#moving-text {
+    white-space: nowrap;
+    overflow-x: auto;
+}
+
+#moving-text::-webkit-scrollbar {
+    display: none;
+}
+
+.con {
+    white-space: nowrap;
+    display: inline-block;
+    animation-name: moving-text;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;    
+}
+
+#icon {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background-color: #FE320A;
+    display: inline-block;
+    margin: 1vw 2vw;
+}
+
 @keyframes anime1 {
     from {
         transform: translate(55%, -3%);
@@ -176,5 +215,14 @@ nav {
     }
     to {
         transform: translate(-20%,30%);
+    }
+}
+
+@keyframes moving-text {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
     }
 }

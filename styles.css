@@ -3,6 +3,8 @@
     src: url(./NeueHaasDisplayMediu.ttf);
 }
 
+
+
 * {
     margin: 0;
     padding: 0;
@@ -13,6 +15,12 @@
 html, body {
     height: 100%;
     width: 100%;
+}
+
+#main {
+    /* background-color: black; */
+    position: relative;
+    z-index: 10;
 }
 
 #page1 {
@@ -165,7 +173,7 @@ nav {
     min-height: 100vh;
     width: 100%;
     padding: 6vw 0;
-    /* background-color: orange; */
+    background-color: #EFEAE3;
 }
 
 #moving-text h1{
@@ -198,6 +206,50 @@ nav {
     background-color: #FE320A;
     display: inline-block;
     margin: 1vw 2vw;
+}
+
+#page3 {
+    height: 60vh;
+    width: 100%;
+    background-color: #EFEAE3;
+}
+
+#page4 {
+    height: 100vh;
+    width: 100%;
+    /* background-color: #EFEAE3; */
+}
+
+#footer {
+    /* text-decoration-color: #EFEAE3; */
+    position: fixed;
+    z-index: 9;
+    height: 100vh;
+    width: 100%;
+    bottom: 0;
+    background-color: black;
+    color: white;
+    display: flex;
+    /* align-items: flex-end; */
+    justify-content: flex-end;
+    flex-direction: column;
+    padding: 1vw 3vw;
+} 
+
+#footer h1 {
+    font-size: 9vw;
+}
+
+#footer-div {
+    height: 20vh;
+    width: 100%;
+    background-color: red;
+}
+
+#footer-bottom {
+    border-top: 1px solid #eeeeee3c;
+    height: 10vh;
+    width: 100%;
 }
 
 @keyframes anime1 {
